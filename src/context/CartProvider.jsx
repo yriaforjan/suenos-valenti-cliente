@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import CartContext from "./CartContext";
 
 const CartProvider = ({ children }) => {
@@ -19,10 +19,9 @@ const CartProvider = ({ children }) => {
     localStorage.setItem("valenti-cart", JSON.stringify(cart));
   }, [cart]);
 
-  const addToCart = (session) => {
+  const addToCart = useCallback((session) => {
     setCart((prevCart) => {
       const isItemInCart = prevCart.find((item) => item.id === session.id);
-
       if (isItemInCart) {
         return prevCart.map((item) =>
           item.id === session.id
@@ -35,17 +34,17 @@ const CartProvider = ({ children }) => {
 
     setNotification(`${session.name} añadida al carrito ✨`);
     setTimeout(() => setNotification(null), 2500);
-  };
+  }, []);
 
-  const increaseQuantity = (id) => {
+  const increaseQuantity = useCallback((id) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
-  };
+  }, []);
 
-  const decreaseQuantity = (id) => {
+  const decreaseQuantity = useCallback((id) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.id === id && item.quantity > 1
@@ -53,28 +52,48 @@ const CartProvider = ({ children }) => {
           : item
       )
     );
-  };
+  }, []);
 
-  const removeFromCart = (id) => {
+  const removeFromCart = useCallback((id) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
-  };
+  }, []);
 
-  const clearCart = () => setCart([]);
+  const clearCart = useCallback(() => setCart([]), []);
 
-  const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+  const total = useMemo(
+    () => cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
+    [cart]
+  );
 
-  const value = {
-    cart,
-    total,
-    cartCount,
-    notification,
-    addToCart,
-    removeFromCart,
-    clearCart,
-    increaseQuantity,
-    decreaseQuantity,
-  };
+  const cartCount = useMemo(
+    () => cart.reduce((acc, item) => acc + item.quantity, 0),
+    [cart]
+  );
+
+  const value = useMemo(
+    () => ({
+      cart,
+      total,
+      cartCount,
+      notification,
+      addToCart,
+      removeFromCart,
+      clearCart,
+      increaseQuantity,
+      decreaseQuantity,
+    }),
+    [
+      cart,
+      total,
+      cartCount,
+      notification,
+      addToCart,
+      removeFromCart,
+      clearCart,
+      increaseQuantity,
+      decreaseQuantity,
+    ]
+  );
 
   return (
     <CartContext.Provider value={value}>
