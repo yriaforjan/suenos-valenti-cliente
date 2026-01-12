@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Viaje al Ser Interno",
+    "price": 105,
+    "img": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Meditación del Despertar",
+    "price": 200,
+    "img": "https://images.unsplash.com/photo-1528319725582-ddc096101511?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Conexión SupraConsciente",
+    "price": 205,
+    "img": "https://images.unsplash.com/photo-1467632499275-7a693a761056?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Alineación de Chakras Superiores",
+    "price": 150,
+    "img": "https://images.unsplash.com/photo-1560421683-6856ea585c78?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Sanación con Geometría Sagrada",
+    "price": 180,
+    "img": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Limpieza de Aura y Campo Áurico",
+    "price": 95,
+    "img": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Activación de la Glándula Pineal",
+    "price": 220,
+    "img": "https://images.unsplash.com/photo-1536623975707-c4b3b2afca01?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Terapia de Sonido con Cuencos",
+    "price": 130,
+    "img": "https://images.unsplash.com/photo-1514820402329-de527fdd2e6d?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Regresión a Vidas Pasadas",
+    "price": 350,
+    "img": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Canalización de Guías Espirituales",
+    "price": 275,
+    "img": "https://images.unsplash.com/photo-1499202977705-85f839117a0b?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 11,
+    "name": "Taller de Sueños Lúcidos",
+    "price": 115,
+    "img": "https://images.unsplash.com/photo-1531353826977-0941b4779a1c?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 12,
+    "name": "Desbloqueo de Energía Kundalini",
+    "price": 190,
+    "img": "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 13,
+    "name": "Viaje Astral Guiado",
+    "price": 210,
+    "img": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 14,
+    "name": "Respiración Holotrópica",
+    "price": 140,
+    "img": "https://images.unsplash.com/photo-1506126279646-a697353d3166?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": 15,
+    "name": "Equilibrio Elemental Tierra-Cielo",
+    "price": 85,
+    "img": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80"
+  }
+]

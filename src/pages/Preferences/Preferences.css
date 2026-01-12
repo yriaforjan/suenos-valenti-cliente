@@ -1,0 +1,43 @@
+.preferences-page {
+  padding-top: 80px;
+  min-height: calc(100vh - 100px);
+  text-align: center;
+}
+
+.preferences-page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.option-group {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  display: inline-block;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: var(--glow-box);
+}
+
+.option-group p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-theme {
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 1rem 2rem;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all var(--trans-slow);
+  border-radius: 4px;
+}
+
+.btn-theme:hover {
+  background: var(--accent-gold);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--accent-gold);
+}

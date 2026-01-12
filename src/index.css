@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  --bg-color: #020205;
+  --text-color: #e0e5ff;
+  --text-muted: #a0a5cc;
+  --primary-glow: #1a0b2e;
+  --accent-cyan: #00f2ff;
+  --accent-purple: #bc13fe;
+  --accent-gold: #ffd700;
+  --glass-bg: rgba(26, 11, 46, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 12px;
+  --glow-text: 0 0 10px rgba(188, 19, 254, 0.5);
+  --glow-box: 0 0 25px rgba(0, 242, 255, 0.15);
+  --trans-slow: 0.4s ease-out;
+  --trans-fast: 0.2s ease;
+}
+
+[data-theme="light"] {
+  --bg-color: #f8f8fa;
+  --text-color: #1a1e2e;
+  --text-muted: #5a5e75;
+  --primary-glow: #ffffff;
+  --accent-cyan: #0077b6;
+  --accent-purple: #7b2cbf;
+  --accent-gold: #e0aa3e;
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glow-text: 0 0 5px rgba(123, 44, 191, 0.2);
+  --glow-box: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+  transition: background-color var(--trans-slow), color var(--trans-slow);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-color);
+  text-shadow: var(--glow-text);
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--trans-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: "Cinzel", serif;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
